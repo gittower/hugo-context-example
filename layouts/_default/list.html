@@ -13,6 +13,7 @@
 
       <ul>
         <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
       </ul>
     </nav>
 
@@ -47,7 +48,7 @@
         <div>
           {{ range .Params.listing }}
             {{ with $.GetPage . }}
-              <article>
+              <article{{ if $.IsHome }} class="home"{{ end }}>
                 <h2>{{ .Title }}</h2>
                 {{ .Summary }}
                 <p><a href="{{ .Permalink }}">Read more →</a></p>
