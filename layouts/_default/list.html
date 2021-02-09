@@ -20,11 +20,7 @@
     <section class="featured">
       <div class="container">
         {{ with .GetPage .Params.featured }}
-          <article>
-            <h2>{{ .Title }}</h2>
-            {{ .Summary }}
-            <p><a href="{{ .Permalink }}">Read more →</a></p>
-          </article>
+          {{ partial "partials/featured.html" . }}
         {{ end }}
       </div>
     </section>
@@ -48,11 +44,7 @@
         <div>
           {{ range .Params.listing }}
             {{ with $.GetPage . }}
-              <article{{ if $.IsHome }} class="home"{{ end }}>
-                <h2>{{ .Title }}</h2>
-                {{ .Summary }}
-                <p><a href="{{ .Permalink }}">Read more →</a></p>
-              </article>
+              {{ partial "partials/listed.html" (dict "Page" $ "Listed" .) }}
             {{ end }}
           {{ end }}
         </div>

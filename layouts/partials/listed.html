@@ -1,0 +1,5 @@
+<article{{ if .Page.IsHome }} class="home"{{ end }}>
+  <h2>{{ .Listed.Title }}</h2>
+  {{ .Listed.Summary }}
+  <p><a href="{{ .Listed.Permalink }}">Read more →</a></p>
+</article>
