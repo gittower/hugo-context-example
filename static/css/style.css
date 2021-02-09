@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding-bottom: 10rem;
+  background-color: #09233c;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+h1 {
+  color: #00caf4;
+}
+
+a {
+  color: #00caf4;
+  font-style: italic;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  padding: 1rem;
+  background-color: white;
+}
+
+nav .logo {
+  display: flex;
+}
+
+nav img {
+  height: 2rem;
+}
+
+nav ul {
+  display: flex;
+  margin: 0 0 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav a {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+}
+
+article {
+  padding: 2rem;
+  border-top: 2rem solid #053256;
+}
+
+article h2 {
+  margin-top: 0;
+  color: #ffc600;
+  font-weight: normal;
+}
+
+aside {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+aside h2 {
+  color: #00caf4;
+}
+
+aside p {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+aside div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container {
+  max-width:  50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featured article {
+  background-color: #184772;
+}
+
+
+.content {
+  background-color: #002d4f;
+}
+
+.listing {
+  background-color: #184772;
+}
+
+.listing .container > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.listing article {
+  width: 100%;
+  margin-bottom: 3rem;
+  background-color: #09233c;
+}
+
+.listing article:last-of-type {
+  margin-bottom: 0;
+}
+
+.listing article.home {
+  box-sizing: border-box;
+  width: 47%;
+}
+
+.listing article.home:last-of-type {
+  margin-bottom: 3rem;
+}

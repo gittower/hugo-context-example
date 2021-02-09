@@ -1,0 +1,6 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Tower Git client"
+
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
