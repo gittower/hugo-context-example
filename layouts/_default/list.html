@@ -19,7 +19,8 @@
 
     <section class="featured">
       <div class="container">
-        {{ with .GetPage .Params.featured }}
+        {{ $featured := .GetPage .Params.featured }}
+        {{ with $featured }}
           {{ partial "partials/featured.html" . }}
         {{ end }}
       </div>
@@ -44,7 +45,8 @@
         <div>
           {{ range .Params.listing }}
             {{ with $.GetPage . }}
-              {{ partial "partials/listed.html" (dict "Page" $ "Listed" .) }}
+              {{ $context := (dict "Page" $ "Listed" .) }}
+              {{ partial "partials/listed.html" $context }}
             {{ end }}
           {{ end }}
         </div>
