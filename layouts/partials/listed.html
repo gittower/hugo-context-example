@@ -1,5 +1,6 @@
-<article{{ if .Page.IsHome }} class="home"{{ end }}>
-  <h2>{{ .Listed.Title }}</h2>
-  {{ .Listed.Summary }}
-  <p><a href="{{ .Listed.Permalink }}">Read more →</a></p>
+<article{{ if .IsHome }} class="home"{{ end }}>
+  {{ $listed := .Scratch.Get "listed" }}
+  <h2>{{ $listed.Title }}</h2>
+  {{ $listed.Summary }}
+  <p><a href="{{ $listed.Permalink }}">Read more →</a></p>
 </article>
