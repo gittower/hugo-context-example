@@ -16,6 +16,18 @@
       </ul>
     </nav>
 
+    <section class="featured">
+      <div class="container">
+        {{ with .GetPage .Params.featured }}
+          <article>
+            <h2>{{ .Title }}</h2>
+            {{ .Summary }}
+            <p><a href="{{ .Permalink }}">Read more →</a></p>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+
     <section class="content">
       <div class="container">
         <h1>{{ .Title }}</h1>
@@ -28,5 +40,22 @@
       <h2>{{ .Params.banner.headline }}</h2>
       <p>{{ .Params.banner.subline}}</p>
     </aside>
+
+    <section class="listing">
+      <div class="container">
+        <h1>{{ .Params.listing_headline }}</h1>
+        <div>
+          {{ range .Params.listing }}
+            {{ with $.GetPage . }}
+              <article>
+                <h2>{{ .Title }}</h2>
+                {{ .Summary }}
+                <p><a href="{{ .Permalink }}">Read more →</a></p>
+              </article>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </section>
   </body>
 </html>
