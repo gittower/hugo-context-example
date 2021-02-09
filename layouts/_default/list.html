@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <nav>
+      <a class="logo" href="{{ "/" | relURL }}">
+        <img src="/img/tower-logo.svg">
+        <img src="/img/tower-claim.svg">
+      </a>
+
+      <ul>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+
+    <section class="content">
+      <div class="container">
+        <h1>{{ .Title }}</h1>
+
+        {{ .Content }}
+      </div>
+    </section>
+  </body>
+</html>
