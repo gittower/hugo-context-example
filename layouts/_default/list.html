@@ -45,8 +45,8 @@
         <div>
           {{ range .Params.listing }}
             {{ with $.GetPage . }}
-              {{ $context := (dict "Page" $ "Listed" .) }}
-              {{ partial "partials/listed.html" $context }}
+              {{ $.Scratch.Set "listed" . }}
+              {{ partial "partials/listed.html" $ }}
             {{ end }}
           {{ end }}
         </div>
